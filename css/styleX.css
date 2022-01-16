@@ -1,4 +1,6 @@
-
+  .active {
+    background-color: #00C1FE !important;
+  }
   
   
   
@@ -82,7 +84,9 @@
   }
 }
 /* Costum the billy notfication icon */
-@media  screen and (max-width : 767px){
+
+
+@media  screen and (max-width :834px){
   .input-group {
     width: 80% !important;
   }
@@ -92,6 +96,11 @@
     bottom: 37px;
   }
 
+}
+@media  screen and (max-width :321px) {
+  .not-but {
+    left: 228px;
+  }
 }
 
 
