@@ -1,8 +1,20 @@
   .active {
     background-color: #00C1FE !important;
+  } 
+  /* Students Tables */
+  .t-rows {
+    border: transparent ;
   }
+  .aligning {
+    vertical-align: middle;
+  }
+  @media screen and (max-width:600px) {
+  .studentsIcon {
+    position: relative;
+  }
+
   
-  
+  }
   
   
   
@@ -102,6 +114,7 @@
     left: 228px;
   }
 }
+
 
 
 
