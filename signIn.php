@@ -21,7 +21,7 @@
             <h6 class="fw-bold">SIGN IN</h6>
             <p class="card-text text-secondary">Enter your credentials to access your account</p>
         </div>   
-        <form action="/action_page.php">
+        <form action="welcome_get.php" method="get">
             <div class="mb-3 mt-3">
               <label for="email">Email</label>
               <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>

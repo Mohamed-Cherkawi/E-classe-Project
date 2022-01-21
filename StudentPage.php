@@ -31,84 +31,13 @@
 </head>
 <body>
     <div class="d-flex" id="wrapper">
-        <!--                 Sidebar             -->
-        <div class=" d-flex flex-column asidebar-C" id="sidebar-wrapper" style="background: #FAFFC1;" >
-            <div class=" border-start border-5 ms-4 mt-3" style="border-color: #00C1FE !important;">
-                <h1 class="card-title fw-bold ms-2 h5">E-classe</h1>
-            </div>
-            
-            <div class="d-flex flex-column  mt-5" >
-                <img class="rounded-circle align-self-center" src="images/youcode.jpg" alt="Youcode Image" width="100" >
-                <h2 class="fw-bold ms-5 mt-3 h5">Admin name</h2>
-                <p class="text-info ms-7 fw-bold">Admin</p>
+           
+     <?php include 'sidebar.php';
+             echo '<!-- Page Content -->
+             <div id="page-content-wrapper" style="background: ##E5E5E5;">' ;
+           include 'navbar.php';
+   ?>
 
-
-            </div>
-            <div class="list-group list-group-flush my-4">
-                <a href="home.html" class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
-                    <i class="bi  bi-house "></i>  Home</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
-                        <i class="bi bi-bookmark"></i>  Course</a>
-                        <a href="#" class="list-group-item list-group-item-action active w-75 second-text m-auto  aside-bar-links ">
-                            <i class="bi bi-mortarboard"></i>  Students</a>
-                            <a href="paymentPage.html" class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
-                                <i class="bi bi-wallet"></i>  Payment</a>
-                                <a href="#" class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
-                                    <i class="bi bi-file-earmark"></i>  Report</a>
-                                    <a href="#" class="list-group-item list-group-item-action bg-transparent w-75 second-text m-auto  aside-bar-links ">
-                                        <i  class="bi bi-sliders"></i>  Settings</a>
-                       
-               
-            </div>
-            <div class="ms-5 mt-6">
-            <a href="signIn.html" class="list-group-item list-group-item-action bg-transparent  second-text ">
-                Logout <i class="bi bi-box-arrow-in-right"></i></a>
-            </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-      
-        <div id="page-content-wrapper" style="background: #e5e5e58f;">
-            <nav class="navbar navbar-expand-lg bg-white  py-4 px-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-2 me-3" id="menu-toggle"></i>
-
-                   <a class="text-black" href="#"> <i class="bi bi-arrow-left-circle fs-3 ms-4"></i></a>
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!--           Search Bar            -->
-                        <form class="d-flex input-group">
-                            <div class="  d-flex align-items-center me-3 rounded border  navb-inp d-flex" style="border :2px solid black">
-                            <input
-                              type="search"
-                              class="form-control rounded border-0 shadow-none"
-                              placeholder="Search"
-                              aria-label="Search"      
-                            />
-                             <!--    Search Button     -->
-                            <button class="border-0 bg-transparent " type="submit"><i class="bi bi-search fs-5 me-1 "></i></button>
-                            
-                            </div>
-                            
-                          </form>
-                        <div>
-                            <!--     Notification Button     -->
-                            <button class="border-0 bg-transparent not-but"><i class="bi bi-bell fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-                   
-                
-            </nav>
             <!--   Page Content   -->
           <main> 
             <div class="container-fluid">
