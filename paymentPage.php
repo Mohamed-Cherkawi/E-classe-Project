@@ -1,3 +1,42 @@
+<?php     
+   $PaymentTable = array(
+    array (
+    'Name' => 'Karthi' ,
+    'Payment Schedule' => 'First',
+    'Bill Number' => '0001223' ,
+    'Amount Paid' => 'DHS 100,000' ,
+    'Balance Amount' => 'DHS 500,000' ,
+    'Date' => '05-Jan,2022' 
+    ),
+    array (
+        'Name' => 'Karthi' ,
+        'Payment Schedule' => 'First',
+        'Bill Number' => '0001223' ,
+        'Amount Paid' => 'DHS 100,000' ,
+        'Balance Amount' => 'DHS 500,000' ,
+        'Date' => '05-Jan,2022'   
+    ) ,
+    array (
+      'Name' => 'Karthi' ,
+      'Payment Schedule' => 'First',
+      'Bill Number' => '0001223' ,
+      'Amount Paid' => 'DHS 100,000' ,
+      'Balance Amount' => 'DHS 500,000' ,
+      'Date' => '05-Jan,2022'   
+  ) ,
+  array (
+    'Name' => 'Karthi' ,
+    'Payment Schedule' => 'First',
+    'Bill Number' => '0001223' ,
+    'Amount Paid' => 'DHS 100,000' ,
+    'Balance Amount' => 'DHS 500,000' ,
+    'Date' => '05-Jan,2022'   
+)
+    );
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +52,12 @@
    
 </head>
 <body>
-    
+
     <div class="d-flex" id="wrapper">
 
      <?php include 'sidebar.php';
      echo '<!-- Page Content -->
-     <div id="page-content-wrapper" style="background: ##E5E5E5;">' ;
+     <div id="page-content-wrapper" style="background: #FFFFFF;">' ;
            include 'navbar.php';
    ?>
 
@@ -44,42 +83,18 @@
             <td  class="text-secondary p-3">Balance amount</td>
             <td  class="text-secondary p-3" colspan="2">Date</td>  
           </tr>
+          <?php foreach ( $PaymentTable as  $value ) : ?>
           <tr>
-              <td class="text-black p-3">Karthi</td>
-              <td class="text-black p-3">First</td>
-              <td class="text-black p-3">00012223</td>
-              <td class="text-black p-3">DHS 100,000</td>
-              <td class="text-black p-3">DHS 500,000</td>
-              <td class="text-black p-3">05-Jan,2022</td>
+              <td class="text-black p-3"><?php echo $value['Name'] ; ?></td>
+              <td class="text-black p-3"><?php echo $value['Payment Schedule'] ; ?></td>
+              <td class="text-black p-3"><?php echo $value['Bill Number'] ; ?></td>
+              <td class="text-black p-3"><?php echo $value['Amount Paid'] ; ?></td>
+              <td class="text-black p-3"><?php echo $value['Balance Amount'] ; ?></td>
+              <td class="text-black p-3"><?php echo $value['Date'] ; ?></td>
               <td class="p-3"><i class="bi bi-eye text-info"></i></td>
           </tr>
-          <tr>
-            <td class="text-black p-3">Karthi</td>
-            <td class="text-black p-3">First</td>
-            <td class="text-black p-3">00012223</td>
-            <td class="text-black p-3">DHS 100,000</td>
-            <td class="text-black p-3">DHS 500,000</td>
-            <td class="text-black p-3">05-Jan,2022</td>
-            <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-        </tr>
-        <tr>
-            <td class="text-black p-3">Karthi</td>
-              <td class="text-black p-3">First</td>
-              <td class="text-black p-3">00012223</td>
-              <td class="text-black p-3">DHS 100,000</td>
-              <td class="text-black p-3">DHS 500,000</td>
-              <td class="text-black p-3">05-Jan,2022</td>
-              <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-        </tr>
-        <tr>
-            <td class="text-black p-3">Karthi</td>
-            <td class="text-black p-3">First</td>
-            <td class="text-black p-3">00012223</td>
-            <td class="text-black p-3">DHS 100,000</td>
-            <td class="text-black p-3">DHS 500,000</td>
-            <td class="text-black p-3">05-Jan,2022</td>
-            <td class="p-3"><i class="bi bi-eye text-info"></i></td>
-        </tr>
+          <?php endforeach ; ?>
+          
             
         </tbody>
       </table>

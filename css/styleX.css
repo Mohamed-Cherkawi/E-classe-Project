@@ -5,9 +5,7 @@
   .t-rows {
     border: transparent ;
   }
-  .aligning {
-    vertical-align: middle;
-  }
+  
   @media screen and (max-width:600px) {
   .studentsIcon {
     position: relative;

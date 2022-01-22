@@ -1,3 +1,59 @@
+<?php     
+   $StudentTable = array(
+    array (
+    'Name' => 'Karthi' ,
+    'Email' => 'user@email.com',
+    'Phone' => '7305477760' ,
+    'Email Number' => '12344567305477760' ,
+    'Date of Admission' => '08-Dec,2021' ,
+    ),
+    array (
+        'Name' => 'Mohamed' ,
+        'Email' => 'user@email.com',
+        'Phone' => '7305477760' ,
+        'Email Number' => '12344567305477760' ,
+        'Date of Admission' => '08-Dec,2021' ,
+        ),
+        array (
+            'Name' => 'Salima' ,
+            'Email' => 'user@email.com',
+            'Phone' => '7305477760' ,
+            'Email Number' => '12344567305477760' ,
+            'Date of Admission' => '08-Dec,2021' ,
+            ),
+            array (
+                'Name' => 'Fouad' ,
+                'Email' => 'user@email.com',
+                'Phone' => '7305477760' ,
+                'Email Number' => '12344567305477760' ,
+                'Date of Admission' => '08-Dec,2021' ,
+                ),
+                array (
+                    'Name' => 'Firdaouss' ,
+                    'Email' => 'user@email.com',
+                    'Phone' => '7305477760' ,
+                    'Email Number' => '12344567305477760' ,
+                    'Date of Admission' => '08-Dec,2021' ,
+                    ),
+                    array (
+                        'Name' => 'Rabiaa' ,
+                        'Email' => 'user@email.com',
+                        'Phone' => '7305477760' ,
+                        'Email Number' => '12344567305477760' ,
+                        'Date of Admission' => '08-Dec,2021' ,
+                        ),
+                        array (
+                            'Name' => 'Adil' ,
+                            'Email' => 'user@email.com',
+                            'Phone' => '7305477760' ,
+                            'Email Number' => '12344567305477760' ,
+                            'Date of Admission' => '08-Dec,2021' ,
+                            )
+        
+);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +90,7 @@
            
      <?php include 'sidebar.php';
              echo '<!-- Page Content -->
-             <div id="page-content-wrapper" style="background: ##E5E5E5;">' ;
+             <div id="page-content-wrapper" style="background:  #FFFFFF;">' ;
            include 'navbar.php';
    ?>
 
@@ -67,200 +123,37 @@
                     <tr>
                         <td style="display: none;"></td>
                     </tr>
-                 
+               <?php foreach($StudentTable as $stu) :  ?>
                   <tr class="bg-white t-rows">    
                       <td>
                         <img  src="images/image.jpg" alt="Groupe of Students" width="80">
                       </td>
-                      <td class="p-3 aligning">
-                        username
+                      <td class="p-3 align-middle">
+                       <?php echo $stu['Name'] ; ?>
                       </td>
-                      <td class="p-3 aligning">
-                         user@email.com 
+                      <td class="p-3 align-middle">
+                      <?php echo $stu['Email'] ; ?>
                       </td>
-                      <td class="p-3 aligning">
-                          7305477760
+                      <td class="p-3 align-middle">
+                      <?php echo $stu['Phone'] ; ?>
                       </td>
-                      <td class="p-3 aligning">
-                          12344567305477760
+                      <td class="p-3 align-middle">
+                      <?php echo $stu['Email Number'] ; ?>  
                       </td>
-                      <td class="p-3 aligning">
-                          08-Dec,2021
+                      <td class="p-3 align-middle">
+                      <?php echo $stu['Date of Admission'] ; ?>   
                       </td>
-                      <td class="p-3 aligning">
+                      <td class="p-3 align-middle">
                        <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
                        <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
                       </td>
                   </tr>
-                  <tr>
-                    <td></td>
-                </tr>
-                  <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
                 <tr>
                     <td></td>
                 </tr>
-                <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr class="bg-white t-rows">    
-                    <td>
-                      <img src="images/image.jpg" alt="Groupe of Students" width="80">
-                    </td>
-                    <td class="p-3 aligning">
-                      username
-                    </td>
-                    <td class="p-3 aligning">
-                       user@email.com 
-                    </td>
-                    <td class="p-3 aligning">
-                        7305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        12344567305477760
-                    </td>
-                    <td class="p-3 aligning">
-                        08-Dec,2021
-                    </td>
-                    <td class="p-3 aligning">
-                     <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                     <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                
-                
-                
-             
+                <?php endforeach ;  ?>
+
+                            
                 </tbody>
               </table>
                </div>

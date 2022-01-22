@@ -17,7 +17,7 @@
             
      <?php include 'sidebar.php';
          echo '<!-- Page Content -->
-         <div id="page-content-wrapper" style="background: ##E5E5E5;">' ;
+         <div id="page-content-wrapper" style="background: #FFFFFF;">' ;
            include 'navbar.php';
    ?>
 
