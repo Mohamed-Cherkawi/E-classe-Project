@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page Sign-in to e-clase">
+    <meta name="keywords" content="Sign-in E-classe learn course">
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Login Page</title>
@@ -21,14 +23,14 @@
             <h6 class="fw-bold">SIGN IN</h6>
             <p class="card-text text-secondary">Enter your credentials to access your account</p>
         </div>   
-        <form action="welcome_get.php" method="get">
+        <form action="Home.php">
             <div class="mb-3 mt-3">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+              <input type="text" class="form-control" id="email" placeholder="Enter your email" name="email">
             </div>
             <div class="mb-3">
               <label for="pwd">Password</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pswd" required maxlength="30">
+              <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pswd"  maxlength="30">
             
             <div class="form-check mb-3">
               <label class="form-check-label">
@@ -36,7 +38,7 @@
               </label>
             </div>
             
-            <button type="submit" class="btn btn-primary w-100 border-0" style="background-color: #00C1FE ;">SIGN IN</button>
+           <a href="Home.php"><button type="submit" class="btn btn-primary w-100 border-0" style="background-color: #00C1FE ;">SIGN IN</button></a> 
           </form>
           <div class="d-flex justify-content-center pt-3">
           <p class="card-text text-secondary" >Forgot your password?</p>

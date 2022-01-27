@@ -1,38 +1,41 @@
 <?php     
-   $PaymentTable = array(
-    array (
-    'Name' => 'Karthi' ,
-    'Payment Schedule' => 'First',
-    'Bill Number' => '0001223' ,
-    'Amount Paid' => 'DHS 100,000' ,
-    'Balance Amount' => 'DHS 500,000' ,
-    'Date' => '05-Jan,2022' 
-    ),
-    array (
-        'Name' => 'Karthi' ,
-        'Payment Schedule' => 'First',
-        'Bill Number' => '0001223' ,
-        'Amount Paid' => 'DHS 100,000' ,
-        'Balance Amount' => 'DHS 500,000' ,
-        'Date' => '05-Jan,2022'   
-    ) ,
-    array (
-      'Name' => 'Karthi' ,
-      'Payment Schedule' => 'First',
-      'Bill Number' => '0001223' ,
-      'Amount Paid' => 'DHS 100,000' ,
-      'Balance Amount' => 'DHS 500,000' ,
-      'Date' => '05-Jan,2022'   
-  ) ,
-  array (
-    'Name' => 'Karthi' ,
-    'Payment Schedule' => 'First',
-    'Bill Number' => '0001223' ,
-    'Amount Paid' => 'DHS 100,000' ,
-    'Balance Amount' => 'DHS 500,000' ,
-    'Date' => '05-Jan,2022'   
-)
-    );
+//    $PaymentTable = array(
+//     array (
+//     'Name' => 'Karthi' ,
+//     'Payment Schedule' => 'First',
+//     'Bill Number' => '0001223' ,
+//     'Amount Paid' => 'DHS 100,000' ,
+//     'Balance Amount' => 'DHS 500,000' ,
+//     'Date' => '05-Jan,2022' 
+//     ),
+//     array (
+//         'Name' => 'Karthi' ,
+//         'Payment Schedule' => 'First',
+//         'Bill Number' => '0001223' ,
+//         'Amount Paid' => 'DHS 100,000' ,
+//         'Balance Amount' => 'DHS 500,000' ,
+//         'Date' => '05-Jan,2022'   
+//     ) ,
+//     array (
+//       'Name' => 'Karthi' ,
+//       'Payment Schedule' => 'First',
+//       'Bill Number' => '0001223' ,
+//       'Amount Paid' => 'DHS 100,000' ,
+//       'Balance Amount' => 'DHS 500,000' ,
+//       'Date' => '05-Jan,2022'   
+//   ) ,
+//   array (
+//     'Name' => 'Karthi' ,
+//     'Payment Schedule' => 'First',
+//     'Bill Number' => '0001223' ,
+//     'Amount Paid' => 'DHS 100,000' ,
+//     'Balance Amount' => 'DHS 500,000' ,
+//     'Date' => '05-Jan,2022'   
+// )
+//     );
+$all_Payments_Json = file_get_contents("payment.json");
+
+$all_Payments = json_decode($all_Payments_Json , true);
 
 ?>
 
@@ -43,6 +46,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" payment page to see Payment Details ">
+    <meta name="keywords" content="payment Payment Details  ">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -51,6 +56,10 @@
     <title>Page de Payment</title>
    
 </head>
+<style>
+          <?php include 'Webkit.php' ; ?>
+
+</style>
 <body>
 
     <div class="d-flex" id="wrapper">
@@ -61,19 +70,14 @@
            include 'navbar.php';
    ?>
 
-    <main>     
+    <main style="background-color :#e5e5e58f !important">     
      <div class="container-fluid">
          <div class="d-flex justify-content-between py-3  border-bottom border-5">
          <h2 class="fw-bold">Payment Details</h2>
          <i class="bi bi-chevron-expand fs-3 text-info"></i>
         </div>
-          
+     <div class="overflow-auto">   
     <table class="table table-hover table-striped overflow-scroll">
-        <thead style="display: none;">
-          <tr >
-            <th scope="col">#</th>
-          </tr>
-        </thead>
         <tbody class="border-top-0">
             <tr>
             <td  class="text-secondary p-3">Name</td>
@@ -83,7 +87,7 @@
             <td  class="text-secondary p-3">Balance amount</td>
             <td  class="text-secondary p-3" colspan="2">Date</td>  
           </tr>
-          <?php foreach ( $PaymentTable as  $value ) : ?>
+          <?php foreach ( $all_Payments as  $value ) : ?>
           <tr>
               <td class="text-black p-3"><?php echo $value['Name'] ; ?></td>
               <td class="text-black p-3"><?php echo $value['Payment Schedule'] ; ?></td>

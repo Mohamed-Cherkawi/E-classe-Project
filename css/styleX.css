@@ -5,15 +5,7 @@
   .t-rows {
     border: transparent ;
   }
-  
-  @media screen and (max-width:600px) {
-  .studentsIcon {
-    position: relative;
-  }
-  }
-  
-  
-  
+
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
@@ -94,7 +86,7 @@
 /* Costum the billy notfication icon */
 
 
-@media  screen and (max-width :834px){
+@media  screen and (max-width :890px){
   .input-group {
     width: 80% !important;
   }
@@ -105,10 +97,32 @@
   }
 
 }
+@media  screen and (max-width :412px) {
+  #sidebar-wrapper {
+    height: auto;
+  }
+}
 @media  screen and (max-width :321px) {
   .not-but {
     left: 228px;
   }
+}
+/**************** Table CSS ********************/
+
+.tableC{
+  height: 530px; !important
+}
+@media  screen and (max-width :429px){
+ 
+ .tableC{
+  max-width:350px;
+  height:450px ;
+ }
+ .uC{
+  text-align: center;
+   flex-direction: column; !important
+ }
+
 }
 
 

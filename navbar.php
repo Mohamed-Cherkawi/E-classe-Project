@@ -1,11 +1,8 @@
- <?php
- echo '
+
  
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-2 me-3" id="menu-toggle"></i>
-
-                   <a class="text-black" href="#"> <i class="bi bi-arrow-left-circle fs-3 ms-4"></i></a>
+                    <i class="bi bi-arrow-left-circle fs-3 ms-4"  id="menu-toggle"></i>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,5 +35,3 @@
                       </div>
                      </div>
                     </nav>    
-' ;
-?>

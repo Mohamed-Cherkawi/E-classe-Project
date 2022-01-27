@@ -1,57 +1,65 @@
 <?php     
-   $StudentTable = array(
-    array (
-    'Name' => 'Karthi' ,
-    'Email' => 'user@email.com',
-    'Phone' => '7305477760' ,
-    'Email Number' => '12344567305477760' ,
-    'Date of Admission' => '08-Dec,2021' ,
-    ),
-    array (
-        'Name' => 'Mohamed' ,
-        'Email' => 'user@email.com',
-        'Phone' => '7305477760' ,
-        'Email Number' => '12344567305477760' ,
-        'Date of Admission' => '08-Dec,2021' ,
-        ),
-        array (
-            'Name' => 'Salima' ,
-            'Email' => 'user@email.com',
-            'Phone' => '7305477760' ,
-            'Email Number' => '12344567305477760' ,
-            'Date of Admission' => '08-Dec,2021' ,
-            ),
-            array (
-                'Name' => 'Fouad' ,
-                'Email' => 'user@email.com',
-                'Phone' => '7305477760' ,
-                'Email Number' => '12344567305477760' ,
-                'Date of Admission' => '08-Dec,2021' ,
-                ),
-                array (
-                    'Name' => 'Firdaouss' ,
-                    'Email' => 'user@email.com',
-                    'Phone' => '7305477760' ,
-                    'Email Number' => '12344567305477760' ,
-                    'Date of Admission' => '08-Dec,2021' ,
-                    ),
-                    array (
-                        'Name' => 'Rabiaa' ,
-                        'Email' => 'user@email.com',
-                        'Phone' => '7305477760' ,
-                        'Email Number' => '12344567305477760' ,
-                        'Date of Admission' => '08-Dec,2021' ,
-                        ),
-                        array (
-                            'Name' => 'Adil' ,
-                            'Email' => 'user@email.com',
-                            'Phone' => '7305477760' ,
-                            'Email Number' => '12344567305477760' ,
-                            'Date of Admission' => '08-Dec,2021' ,
-                            )
+//    $StudentTable = array(
+//     array (
+//     'Name' => 'Karthi' ,
+//     'Email' => 'user@email.com',
+//     'Phone' => '7305477760' ,
+//     'Email Number' => '12344567305477760' ,
+//     'Date of Admission' => '08-Dec,2021' ,
+//     ),
+//     array (
+//         'Name' => 'Mohamed' ,
+//         'Email' => 'user@email.com',
+//         'Phone' => '7305477760' ,
+//         'Email Number' => '12344567305477760' ,
+//         'Date of Admission' => '08-Dec,2021' ,
+//         ),
+//         array (
+//             'Name' => 'Salima' ,
+//             'Email' => 'user@email.com',
+//             'Phone' => '7305477760' ,
+//             'Email Number' => '12344567305477760' ,
+//             'Date of Admission' => '08-Dec,2021' ,
+//             ),
+//             array (
+//                 'Name' => 'Fouad' ,
+//                 'Email' => 'user@email.com',
+//                 'Phone' => '7305477760' ,
+//                 'Email Number' => '12344567305477760' ,
+//                 'Date of Admission' => '08-Dec,2021' ,
+//                 ),
+//                 array (
+//                     'Name' => 'Firdaouss' ,
+//                     'Email' => 'user@email.com',
+//                     'Phone' => '7305477760' ,
+//                     'Email Number' => '12344567305477760' ,
+//                     'Date of Admission' => '08-Dec,2021' ,
+//                     ),
+//                     array (
+//                         'Name' => 'Rabiaa' ,
+//                         'Email' => 'user@email.com',
+//                         'Phone' => '7305477760' ,
+//                         'Email Number' => '12344567305477760' ,
+//                         'Date of Admission' => '08-Dec,2021' ,
+//                         ),
+//                         array (
+//                             'Name' => 'Adil' ,
+//                             'Email' => 'user@email.com',
+//                             'Phone' => '7305477760' ,
+//                             'Email Number' => '12344567305477760' ,
+//                             'Date of Admission' => '08-Dec,2021' ,
+//                             )
         
-);
+// );
 
+require("script.php") ;
+
+
+
+
+    $all_students = file_get_contents("student.json");
+    $all_stude = json_decode($all_students , true);
+   
 ?>
 
 <!DOCTYPE html>
@@ -60,29 +68,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page Student for see Students List and more information about student  ">
+    <meta name="keywords" content="Student Students List ">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styleX.css">
     <title>Student Page</title>
     <style>
+        <?php include 'Webkit.php' ; ?>
+        body {
+        background-color:#e5e5e58f ;
+    }
         .btn {
-            padding:  0.375rem 1.5rem;
+            padding:  0.2rem 1.3rem;
             color: white;
             font-weight: lighter;
         }
-        .table tbody td:first-child {
-            border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px
+        .table thead th,
+        .table td {
+            border: none
         }
-
-        .table tbody td:last-child {
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px
-        }
-        a {
-            text-decoration: none;
-        }
+       
+      
     </style>
 </head>
 <body>
@@ -90,26 +98,72 @@
            
      <?php include 'sidebar.php';
              echo '<!-- Page Content -->
-             <div id="page-content-wrapper" style="background:  #FFFFFF;">' ;
+             <div id="page-content-wrapper" style="background:#FFFFFF">' ;
            include 'navbar.php';
    ?>
 
             <!--   Page Content   -->
-          <main> 
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between py-3  border-bottom border-5">
+          <main  style="background-color: #e5e5e58f;"> 
+            <div class="container-fluid overflow-auto">
+                <div class="py-3 border-bottom border-5 d-flex justify-content-between uC">
                 <h2 class="fw-bold">Students List</h2>
                 <div>
-                <i class="bi bi-chevron-expand fs-3 text-info me-4"></i>
-                <button type="button" class="btn btn-info">ADD NEW STUDENT</button>    
+                <i class="bi bi-chevron-expand fs-4 text-info me-4 col-md-2"></i>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ ADD NEW STUDENT
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please fill up </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="" method="POST">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Entrez Le nom d'étudiant</label>
+      <input type="text" name="Name" placeholder="Nom..." class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Entrez L'émail d'étudiant</label>
+      <input type="email" name="Email" value="@gmail.com" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Entrez Le numero d'étudiant</label>
+      <input type="number" name="Phone" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Entrez Le numero d'email d'étudiant</label>
+      <input type="number" name="EmailNumber" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Entrez La Date</label>
+      <input type="date" name="DateOfAdmission" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3" style="text-align: center;" >
+
+      <button type="submit" class="btn btn-info w-100 " name="submit" >Submit</button>
+      <p class="error"><?php echo @$error; ?></p>
+      <p class="success"><?php echo @$success; ?></p>
+    </div>
+  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
                 </div>
                </div>
-               <table class="table   overflow-scroll">
-                <thead style="display: none;">
-                  <tr>
-                    <th scope="col">#</th>
-                  </tr>
-                </thead>
+              <div class="overflow-auto tableC">
+               <table class="table">
                 <tbody class="border-top-0">
                     <tr>
                     <td></td>
@@ -123,7 +177,7 @@
                     <tr>
                         <td style="display: none;"></td>
                     </tr>
-               <?php foreach($StudentTable as $stu) :  ?>
+               <?php foreach($all_stude as $stu) :  ?>
                   <tr class="bg-white t-rows">    
                       <td>
                         <img  src="images/image.jpg" alt="Groupe of Students" width="80">
@@ -138,14 +192,17 @@
                       <?php echo $stu['Phone'] ; ?>
                       </td>
                       <td class="p-3 align-middle">
-                      <?php echo $stu['Email Number'] ; ?>  
+                      <?php echo $stu['EmailNumber'] ; ?>  
                       </td>
                       <td class="p-3 align-middle">
-                      <?php echo $stu['Date of Admission'] ; ?>   
+                      <?php echo $stu['DateOfAdmission'] ; ?>   
                       </td>
                       <td class="p-3 align-middle">
                        <a href="#"> <i class="bi bi-pencil fs-4 text-info"></i> </a> 
-                       <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
+                       
+                      </td>
+                      <td class="p-3 align-middle" >
+                      <a href="#"> <i class="bi bi-trash fs-4 ms-4 text-info"></i></a>
                       </td>
                   </tr>
                 <tr>
@@ -156,23 +213,13 @@
                             
                 </tbody>
               </table>
-               </div>
-              </main> 
+              </div> 
+
+            
+            </div>
+          </main> 
           </div>
        </div> 
-       
-
-
-
-
-
-
-
-
-
-
-
-
     <script
     src="js/E-classe-Project.js"
    

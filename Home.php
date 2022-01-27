@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page dashboard for see number of Users and Students course  ">
+    <meta name="keywords" content=" E-classe Home learn course">
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styleX.css">
-    <link rel="stylesheet" href="css/style.css">
     <title>Home Page</title>
 </head>
+<style>
+    
+            <?php include 'Webkit.php' ; ?>
+</style>
 <body>
    
     <div class="d-flex" id="wrapper">
@@ -89,21 +94,10 @@
 
         
         </div>
-
-   
-   
-   
-    
-
-
-
-
-
-  
     <script
       src="js/E-classe-Project.js"
      
-    ></script>
+    ></script> 
     <script>
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
