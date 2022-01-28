@@ -54,12 +54,13 @@ $all_Payments = json_decode($all_Payments_Json , true);
     <link rel="stylesheet" href="css/styleX.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Page de Payment</title>
-   
-</head>
-<style>
+    <style>
           <?php include 'Webkit.php' ; ?>
 
 </style>
+   
+</head>
+
 <body>
 
     <div class="d-flex" id="wrapper">
@@ -70,13 +71,13 @@ $all_Payments = json_decode($all_Payments_Json , true);
            include 'navbar.php';
    ?>
 
-    <main style="background-color :#e5e5e58f !important">     
+    <main>     
      <div class="container-fluid">
          <div class="d-flex justify-content-between py-3  border-bottom border-5">
          <h2 class="fw-bold">Payment Details</h2>
          <i class="bi bi-chevron-expand fs-3 text-info"></i>
         </div>
-     <div class="overflow-auto">   
+     <div class="overflow-auto tableC">   
     <table class="table table-hover table-striped overflow-scroll">
         <tbody class="border-top-0">
             <tr>
@@ -102,7 +103,8 @@ $all_Payments = json_decode($all_Payments_Json , true);
             
         </tbody>
       </table>
-         </div>  
+         </div> 
+     </div> 
        </main>  
      </div>
      
@@ -112,14 +114,7 @@ $all_Payments = json_decode($all_Payments_Json , true);
     src="js/E-classe-Project.js"
    
   ></script>
-  <script>
-      var el = document.getElementById("wrapper");
-      var toggleButton = document.getElementById("menu-toggle");
-
-      toggleButton.onclick = function () {
-          el.classList.toggle("toggled");
-      };
-  </script>
+  <script src="js/toogleSide.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

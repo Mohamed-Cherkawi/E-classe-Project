@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styleX.css">
     <title>Home Page</title>
-</head>
-<style>
+    <style>
     
             <?php include 'Webkit.php' ; ?>
 </style>
+</head>
+
 <body>
    
     <div class="d-flex" id="wrapper">
@@ -98,14 +99,7 @@
       src="js/E-classe-Project.js"
      
     ></script> 
-    <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
+    <script src="js/toogleSide.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

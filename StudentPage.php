@@ -123,7 +123,7 @@ require("script.php") ;
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="" method="POST">
+      <form action="POST" method="POST">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Entrez Le nom d'étudiant</label>
       <input type="text" name="Name" placeholder="Nom..." class="form-control" id="exampleFormControlInput1">
@@ -224,14 +224,8 @@ require("script.php") ;
     src="js/E-classe-Project.js"
    
   ></script>
-  <script>
-      var el = document.getElementById("wrapper");
-      var toggleButton = document.getElementById("menu-toggle");
+  <script src="js/toogleSide.js"></script>
 
-      toggleButton.onclick = function () {
-          el.classList.toggle("toggled");
-      };
-  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
