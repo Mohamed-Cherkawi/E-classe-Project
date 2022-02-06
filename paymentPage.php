@@ -1,41 +1,10 @@
-<?php     
-//    $PaymentTable = array(
-//     array (
-//     'Name' => 'Karthi' ,
-//     'Payment Schedule' => 'First',
-//     'Bill Number' => '0001223' ,
-//     'Amount Paid' => 'DHS 100,000' ,
-//     'Balance Amount' => 'DHS 500,000' ,
-//     'Date' => '05-Jan,2022' 
-//     ),
-//     array (
-//         'Name' => 'Karthi' ,
-//         'Payment Schedule' => 'First',
-//         'Bill Number' => '0001223' ,
-//         'Amount Paid' => 'DHS 100,000' ,
-//         'Balance Amount' => 'DHS 500,000' ,
-//         'Date' => '05-Jan,2022'   
-//     ) ,
-//     array (
-//       'Name' => 'Karthi' ,
-//       'Payment Schedule' => 'First',
-//       'Bill Number' => '0001223' ,
-//       'Amount Paid' => 'DHS 100,000' ,
-//       'Balance Amount' => 'DHS 500,000' ,
-//       'Date' => '05-Jan,2022'   
-//   ) ,
-//   array (
-//     'Name' => 'Karthi' ,
-//     'Payment Schedule' => 'First',
-//     'Bill Number' => '0001223' ,
-//     'Amount Paid' => 'DHS 100,000' ,
-//     'Balance Amount' => 'DHS 500,000' ,
-//     'Date' => '05-Jan,2022'   
-// )
-//     );
-$all_Payments_Json = file_get_contents("payment.json");
+<?php    
+include 'connect.php';
+if(isset($_POST['submit'])) {
+  
 
-$all_Payments = json_decode($all_Payments_Json , true);
+}
+
 
 ?>
 
@@ -88,17 +57,15 @@ $all_Payments = json_decode($all_Payments_Json , true);
             <td  class="text-secondary p-3">Balance amount</td>
             <td  class="text-secondary p-3" colspan="2">Date</td>  
           </tr>
-          <?php foreach ( $all_Payments as  $value ) : ?>
           <tr>
-              <td class="text-black p-3"><?php echo $value['Name'] ; ?></td>
-              <td class="text-black p-3"><?php echo $value['Payment Schedule'] ; ?></td>
-              <td class="text-black p-3"><?php echo $value['Bill Number'] ; ?></td>
-              <td class="text-black p-3"><?php echo $value['Amount Paid'] ; ?></td>
-              <td class="text-black p-3"><?php echo $value['Balance Amount'] ; ?></td>
-              <td class="text-black p-3"><?php echo $value['Date'] ; ?></td>
+              <td class="text-black p-3"></td>
+              <td class="text-black p-3"></td>
+              <td class="text-black p-3"></td>
+              <td class="text-black p-3"></td>
+              <td class="text-black p-3"></td>
+              <td class="text-black p-3"></td>
               <td class="p-3"><i class="bi bi-eye text-info"></i></td>
           </tr>
-          <?php endforeach ; ?>
           
             
         </tbody>
